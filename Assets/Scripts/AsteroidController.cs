@@ -1,0 +1,89 @@
+using UnityEngine;
+
+public class AsteroidController : MonoBehaviour
+{
+    public float minSpeed = 1f;
+    public float maxSpeed = 3f;
+    public float minRotationSpeed = -30f;
+    public float maxRotationSpeed = 30f;
+
+    private float screenLeft, screenRight, screenTop, screenBottom;
+    private float objectWidth, objectHeight;
+
+    private Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        // Give a random velocity
+        float moveAngle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
+        float moveSpeed = Random.Range(minSpeed, maxSpeed);
+        Vector2 moveDirection = new Vector2(Mathf.Cos(moveAngle), Mathf.Sin(moveAngle));
+        rb.linearVelocity = moveDirection * moveSpeed;
+
+        // Give a random rotation speed
+        rb.angularVelocity = Random.Range(minRotationSpeed, maxRotationSpeed);
+
+        // Get camera bounds in world space
+        Camera cam = Camera.main;
+        float camHeight = 2f * cam.orthographicSize;
+        float camWidth = camHeight * cam.aspect;
+        screenLeft = -camWidth / 2;
+        screenRight = camWidth / 2;
+        screenBottom = -camHeight / 2;
+        screenTop = camHeight / 2;
+
+        // Get the sprite size in world units
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            objectWidth = sr.bounds.extents.x;
+            objectHeight = sr.bounds.extents.y;
+        }
+        else
+        {
+            objectWidth = objectHeight = 0.5f; // fallback
+        }
+
+    }
+
+    void ScreenWrap()
+    {
+        Vector3 pos = transform.position;
+        bool wrapped = false;
+
+        if (pos.x < screenLeft - objectWidth)
+        {
+            pos.x = screenRight + objectWidth;
+            wrapped = true;
+        }
+        else if (pos.x > screenRight + objectWidth)
+        {
+            pos.x = screenLeft - objectWidth;
+            wrapped = true;
+        }
+
+        if (pos.y < screenBottom - objectHeight)
+        {
+            pos.y = screenTop + objectHeight;
+            wrapped = true;
+        }
+        else if (pos.y > screenTop + objectHeight)
+        {
+            pos.y = screenBottom - objectHeight;
+            wrapped = true;
+        }
+
+        if (wrapped)
+            transform.position = pos;
+    }
+
+
+    void Update()
+    {
+        ScreenWrap();
+    }
+
+
+}
