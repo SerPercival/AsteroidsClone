@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShipController : MonoBehaviour
@@ -9,12 +10,22 @@ public class PlayerShipController : MonoBehaviour
     private float objectWidth, objectHeight;
 
     public GameObject thrusterFlame;
+    private AudioSource engineAudio;
 
     private Rigidbody2D rb;
+
+    public GameObject missilePrefab;
+    public float missileCooldown = 0.2f; // seconds between shots
+    public int maxMissiles = 4; // limit number of missiles on screen
+
+    private float lastFireTime = -999f;
+    private List<GameObject> activeMissiles = new List<GameObject>();
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        engineAudio = GetComponent<AudioSource>();
 
         // Calculate screen bounds
         Camera cam = Camera.main;
@@ -67,6 +78,31 @@ public class PlayerShipController : MonoBehaviour
         // Activate thruster flame if thrusting
         thrusterFlame.SetActive(isThrusting);
 
+        if (isThrusting && !engineAudio.isPlaying)
+        {
+            engineAudio.Play();
+        }
+        else if (!isThrusting && engineAudio.isPlaying)
+        {
+            engineAudio.Stop();
+        }
+
+        CleanupMissiles();
+
+        bool canShoot = activeMissiles.Count < maxMissiles && Time.time - lastFireTime > missileCooldown;
+
+        if (canShoot && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftControl)))
+        {
+            // Fire!
+            GameObject missile = Instantiate(
+                missilePrefab,
+                transform.position + transform.up * 0.5f, // nose of the ship
+                transform.rotation
+            );
+            activeMissiles.Add(missile);
+            lastFireTime = Time.time;
+            // Optionally, play shoot sound here
+        }
 
 
         ScreenWrap();
@@ -88,6 +124,11 @@ public class PlayerShipController : MonoBehaviour
             pos.y = screenBottom - objectHeight;
 
         transform.position = pos;
+    }
+    void CleanupMissiles()
+    {
+        // Remove destroyed missiles from the list
+        activeMissiles.RemoveAll(missile => missile == null);
     }
 
 
