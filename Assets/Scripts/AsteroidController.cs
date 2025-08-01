@@ -3,9 +3,10 @@ using UnityEngine;
 public class AsteroidController : MonoBehaviour
 {
     public float minSpeed = 1f;
-    public float maxSpeed = 3f;
+    public float maxSpeed =3f;
     public float minRotationSpeed = -30f;
     public float maxRotationSpeed = 30f;
+    private bool hasSplit = false;
 
     private float screenLeft, screenRight, screenTop, screenBottom;
     private float objectWidth, objectHeight;
@@ -18,10 +19,8 @@ public class AsteroidController : MonoBehaviour
     public Sprite smallSprite;
     public GameObject asteroidPrefab; // For spawning new asteroids when splitting
 
-    void Start()
+    void ApplySize()
     {
-        rb = GetComponent<Rigidbody2D>();
-
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         if (asteroidSize == 3 && bigSprite != null) sr.sprite = bigSprite;
         else if (asteroidSize == 2 && mediumSprite != null) sr.sprite = mediumSprite;
@@ -36,6 +35,13 @@ public class AsteroidController : MonoBehaviour
         {
             objectWidth = objectHeight = 0.5f; // fallback
         }
+    }
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        ApplySize();
+        Debug.Log($"Asteroid size: {asteroidSize}, asteroidPrefab: {asteroidPrefab}");
 
         // Give a random velocity
         float moveAngle = Random.Range(0f, 360f) * Mathf.Deg2Rad;
@@ -94,34 +100,46 @@ public class AsteroidController : MonoBehaviour
         ScreenWrap();
     }
 
+
     public void Split()
     {
-        if (asteroidSize > 1)
-        {
-            Vector2 originalVelocity = GetComponent<Rigidbody2D>().linearVelocity; // Get before splitting
-            Transform originalTransform = transform;
+        if (hasSplit) return;
+        hasSplit = true;
 
-            for (int i = 0; i < 2; i++)
+        Vector2 originalVelocity = GetComponent<Rigidbody2D>().linearVelocity;
+        Debug.Log($"Splitting asteroid of size {asteroidSize}");
+
+        int numToSpawn = 0;
+        if (asteroidSize == 3) numToSpawn = 2; // big splits into 2 medium
+        else if (asteroidSize == 2) numToSpawn = 3; // medium splits into 3 small
+
+        if (asteroidSize > 1 && asteroidPrefab != null)
+        {
+            for (int i = 0; i < numToSpawn; i++)
             {
-                GameObject newAsteroid = Instantiate(asteroidPrefab, originalTransform.position, Quaternion.identity);
+                GameObject newAsteroid = Instantiate(asteroidPrefab, transform.position, Quaternion.identity);
                 AsteroidController ac = newAsteroid.GetComponent<AsteroidController>();
                 ac.asteroidSize = asteroidSize - 1;
                 ac.bigSprite = bigSprite;
                 ac.mediumSprite = mediumSprite;
                 ac.smallSprite = smallSprite;
-                ac.asteroidPrefab = asteroidPrefab;
+                //ac.asteroidPrefab = asteroidPrefab;
+                ac.ApplySize(); // Ensure correct sprite and size
 
                 Rigidbody2D rb = newAsteroid.GetComponent<Rigidbody2D>();
                 Vector2 newDir = Random.insideUnitCircle.normalized;
-
-                // Now use the original velocity:
                 rb.linearVelocity = newDir * originalVelocity.magnitude * 2f;
+                Debug.Log($"Spawning asteroid of size {ac.asteroidSize}, asteroidPrefab: {ac.asteroidPrefab}");
             }
             Destroy(gameObject);
         }
-        else 
+        else
+        {
+            Debug.Log("Smallest asteroid destroyed!");
             Destroy(gameObject);
+        }
     }
+
 
 
 }
