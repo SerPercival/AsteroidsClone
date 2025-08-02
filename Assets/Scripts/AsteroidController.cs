@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic; // Add this for List<T>
 
 public class AsteroidController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class AsteroidController : MonoBehaviour
     void ApplySize()
     {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        // Update sprite based on size
         if (asteroidSize == 3 && bigSprite != null) sr.sprite = bigSprite;
         else if (asteroidSize == 2 && mediumSprite != null) sr.sprite = mediumSprite;
         else if (asteroidSize == 1 && smallSprite != null) sr.sprite = smallSprite;
@@ -30,6 +32,24 @@ public class AsteroidController : MonoBehaviour
         {
             objectWidth = sr.bounds.extents.x;
             objectHeight = sr.bounds.extents.y;
+            
+            // Update the polygon collider to match the new sprite
+            PolygonCollider2D poly = GetComponent<PolygonCollider2D>();
+            if (poly != null && sr.sprite != null)
+            {
+                // Get the sprite's physics shape
+                Physics2D.SyncTransforms(); // Ensure transforms are up to date
+                UnityEngine.Sprite sprite = sr.sprite;
+                poly.pathCount = sprite.GetPhysicsShapeCount();
+                
+                // Copy the sprite's physics shape to the polygon collider
+                for (int i = 0; i < poly.pathCount; i++)
+                {
+                    List<Vector2> path = new List<Vector2>();
+                    sprite.GetPhysicsShape(i, path);
+                    poly.SetPath(i, path.ToArray());
+                }
+            }
         }
         else
         {
@@ -101,6 +121,16 @@ public class AsteroidController : MonoBehaviour
     }
 
 
+    public void AddScoreForAsteroid()
+    {
+        int scoreToAdd = 0;
+        if (asteroidSize == 3) scoreToAdd = GameStateManager.Instance.BigAsteroidScore;
+        else if (asteroidSize == 2) scoreToAdd = GameStateManager.Instance.MediumAsteroidScore;
+        else if (asteroidSize == 1) scoreToAdd = GameStateManager.Instance.SmallAsteroidScore;
+        GameStateManager.Instance.AddScore(scoreToAdd);
+        Debug.Log($"Added {scoreToAdd} points for asteroid of size {asteroidSize}");
+    }
+
     public void Split()
     {
         if (hasSplit) return;
@@ -108,6 +138,8 @@ public class AsteroidController : MonoBehaviour
 
         Vector2 originalVelocity = GetComponent<Rigidbody2D>().linearVelocity;
         Debug.Log($"Splitting asteroid of size {asteroidSize}");
+
+        AddScoreForAsteroid();
 
         int numToSpawn = 0;
         if (asteroidSize == 3) numToSpawn = 2; // big splits into 2 medium
@@ -123,7 +155,6 @@ public class AsteroidController : MonoBehaviour
                 ac.bigSprite = bigSprite;
                 ac.mediumSprite = mediumSprite;
                 ac.smallSprite = smallSprite;
-                //ac.asteroidPrefab = asteroidPrefab;
                 ac.ApplySize(); // Ensure correct sprite and size
 
                 Rigidbody2D rb = newAsteroid.GetComponent<Rigidbody2D>();

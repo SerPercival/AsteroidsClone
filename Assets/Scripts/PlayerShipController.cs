@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerShipController : MonoBehaviour
 {
-    public float thrustForce = 5f;
+    public float thrustForce = 50f; // Increased for FixedUpdate timing
     public float turnSpeed = 180f;
 
     private float screenLeft, screenRight, screenTop, screenBottom;
@@ -56,26 +56,8 @@ public class PlayerShipController : MonoBehaviour
 
     void Update()
     {
-        // Rotate left (A or LeftArrow)
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Rotate(0, 0, turnSpeed * Time.deltaTime);
-        }
-
-        // Rotate right (D or RightArrow)
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Rotate(0, 0, -turnSpeed * Time.deltaTime);
-        }
-
-        // Thrust forward (W or UpArrow)
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            rb.AddForce(transform.up * thrustForce);
-        }
-
+        // Only handle non-physics logic here
         bool isThrusting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
-        // Activate thruster flame if thrusting
         thrusterFlame.SetActive(isThrusting);
 
         if (isThrusting && !engineAudio.isPlaying)
@@ -104,9 +86,46 @@ public class PlayerShipController : MonoBehaviour
             // Optionally, play shoot sound here
         }
 
-
         ScreenWrap();
+    }
 
+    void FixedUpdate()
+    {
+        bool rotated = false;
+        // Rotate left (A or LeftArrow)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.Rotate(0, 0, turnSpeed * Time.fixedDeltaTime); // smooth turn speed
+            rotated = true;
+        }
+
+        // Rotate right (D or RightArrow)
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.Rotate(0, 0, -turnSpeed * Time.fixedDeltaTime); // smooth turn speed
+            rotated = true;
+        }
+
+        // If player is rotating, null out any angular velocity from physics
+        if (rotated)
+        {
+            rb.angularVelocity = 0f;
+        }
+
+        // Thrust forward (W or UpArrow)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        {
+            rb.AddForce(transform.up * thrustForce);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Prevent asteroids from imparting spin to the ship
+        if (collision.gameObject.CompareTag("Asteroid"))
+        {
+            rb.angularVelocity = 0f;
+        }
     }
 
     void ScreenWrap()
