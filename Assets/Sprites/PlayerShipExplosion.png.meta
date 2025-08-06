@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: 8f9cc84205cbcbf40ab618261a3bc8c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1045104566650868568
+    second: PlayerShipExplosion_0
+  - first:
+      213: 6878313440184250832
+    second: PlayerShipExplosion_1
+  - first:
+      213: 6041784616436929297
+    second: PlayerShipExplosion_2
+  - first:
+      213: 3379837566783011498
+    second: PlayerShipExplosion_3
+  - first:
+      213: 586959304298566963
+    second: PlayerShipExplosion_4
+  - first:
+      213: 3272109657368560811
+    second: PlayerShipExplosion_5
+  - first:
+      213: 7986080416783674416
+    second: PlayerShipExplosion_6
+  - first:
+      213: -739388016417228463
+    second: PlayerShipExplosion_7
+  - first:
+      213: -8932592500203208957
+    second: PlayerShipExplosion_8
+  - first:
+      213: -878362119079164000
+    second: PlayerShipExplosion_9
+  - first:
+      213: 2214310487389263684
+    second: PlayerShipExplosion_10
+  - first:
+      213: -3456817948620874824
+    second: PlayerShipExplosion_11
+  - first:
+      213: -7715975638259535712
+    second: PlayerShipExplosion_12
+  - first:
+      213: 672284193422648741
+    second: PlayerShipExplosion_13
+  - first:
+      213: -4695787904092478657
+    second: PlayerShipExplosion_14
+  - first:
+      213: -7874692083324876766
+    second: PlayerShipExplosion_15
+  - first:
+      213: 4496997292385111259
+    second: PlayerShipExplosion_16
+  - first:
+      213: -1149491061267067382
+    second: PlayerShipExplosion_17
+  - first:
+      213: -683086513859520634
+    second: PlayerShipExplosion_18
+  - first:
+      213: 8449603452573776233
+    second: PlayerShipExplosion_19
+  - first:
+      213: 1841031760068731765
+    second: PlayerShipExplosion_20
+  - first:
+      213: 2139588961015229560
+    second: PlayerShipExplosion_21
+  - first:
+      213: 4496811287061203171
+    second: PlayerShipExplosion_22
+  - first:
+      213: -2692664862661211317
+    second: PlayerShipExplosion_23
+  - first:
+      213: 3968526477343844125
+    second: PlayerShipExplosion_24
+  - first:
+      213: 7179267059946492194
+    second: PlayerShipExplosion_25
+  - first:
+      213: 8567150271544078588
+    second: PlayerShipExplosion_26
+  - first:
+      213: -1228190658523689649
+    second: PlayerShipExplosion_27
+  - first:
+      213: -1549194240465892920
+    second: PlayerShipExplosion_28
+  - first:
+      213: -8788004399484639150
+    second: PlayerShipExplosion_29
+  - first:
+      213: 8914104131254798961
+    second: PlayerShipExplosion_30
+  - first:
+      213: 3952825015598403314
+    second: PlayerShipExplosion_31
+  - first:
+      213: 9135672945380115169
+    second: PlayerShipExplosion_32
+  - first:
+      213: -4204979740212226074
+    second: PlayerShipExplosion_33
+  - first:
+      213: -4552010154445814331
+    second: PlayerShipExplosion_34
+  - first:
+      213: 4207876427128935320
+    second: PlayerShipExplosion_35
+  - first:
+      213: -3308629777154507494
+    second: PlayerShipExplosion_36
+  - first:
+      213: -5588602794949066580
+    second: PlayerShipExplosion_37
+  - first:
+      213: 83546506469970796
+    second: PlayerShipExplosion_38
+  - first:
+      213: -7405438719032253964
+    second: PlayerShipExplosion_39
+  - first:
+      213: -2512136370921118001
+    second: PlayerShipExplosion_40
+  - first:
+      213: -761912035022962577
+    second: PlayerShipExplosion_41
+  - first:
+      213: 575615797312306940
+    second: PlayerShipExplosion_42
+  - first:
+      213: 6170289357155774231
+    second: PlayerShipExplosion_43
+  - first:
+      213: 3829591671835133289
+    second: PlayerShipExplosion_44
+  - first:
+      213: 4304332810221570014
+    second: PlayerShipExplosion_45
+  - first:
+      213: -7213267806649399638
+    second: PlayerShipExplosion_46
+  - first:
+      213: -7855776850637510789
+    second: PlayerShipExplosion_47
+  - first:
+      213: 4078043805675450267
+    second: PlayerShipExplosion_48
+  - first:
+      213: -3685619608620430420
+    second: PlayerShipExplosion_49
+  - first:
+      213: 4035184194541084838
+    second: PlayerShipExplosion_50
+  - first:
+      213: -18364989269658457
+    second: PlayerShipExplosion_51
+  - first:
+      213: 532617824591845403
+    second: PlayerShipExplosion_52
+  - first:
+      213: -4588238680029397472
+    second: PlayerShipExplosion_53
+  - first:
+      213: 7245111292185951882
+    second: PlayerShipExplosion_54
+  - first:
+      213: 3258805203092442362
+    second: PlayerShipExplosion_55
+  - first:
+      213: -2314413881243314595
+    second: PlayerShipExplosion_56
+  - first:
+      213: -3501028133866135714
+    second: PlayerShipExplosion_57
+  - first:
+      213: -3323965046163426449
+    second: PlayerShipExplosion_58
+  - first:
+      213: -4099201399949108081
+    second: PlayerShipExplosion_59
+  - first:
+      213: 2727521008765050133
+    second: PlayerShipExplosion_60
+  - first:
+      213: -2593325253958988563
+    second: PlayerShipExplosion_61
+  - first:
+      213: -2929002084360287869
+    second: PlayerShipExplosion_62
+  - first:
+      213: -2725671238948656188
+    second: PlayerShipExplosion_63
+  - first:
+      213: -3703535758723860068
+    second: PlayerShipExplosion_64
+  - first:
+      213: 8363962113714797026
+    second: PlayerShipExplosion_65
+  - first:
+      213: -4534240923963411245
+    second: PlayerShipExplosion_66
+  - first:
+      213: 5637331279663410696
+    second: PlayerShipExplosion_67
+  - first:
+      213: -2684838069027932959
+    second: PlayerShipExplosion_68
+  - first:
+      213: 2533312552000393965
+    second: PlayerShipExplosion_69
+  - first:
+      213: -6803460683324429058
+    second: PlayerShipExplosion_70
+  - first:
+      213: -7015296419464692367
+    second: PlayerShipExplosion_71
+  - first:
+      213: 506928896287471351
+    second: PlayerShipExplosion_72
+  - first:
+      213: 3194198075071982931
+    second: PlayerShipExplosion_73
+  - first:
+      213: 3627564961707080926
+    second: PlayerShipExplosion_74
+  - first:
+      213: -8066720611668685246
+    second: PlayerShipExplosion_75
+  - first:
+      213: -3217802228859459612
+    second: PlayerShipExplosion_76
+  - first:
+      213: -7748620943385508698
+    second: PlayerShipExplosion_77
+  - first:
+      213: -7794583507115298942
+    second: PlayerShipExplosion_78
+  - first:
+      213: 7314722458336930535
+    second: PlayerShipExplosion_79
+  - first:
+      213: 8059894214206363146
+    second: PlayerShipExplosion_80
+  - first:
+      213: -7964215733341645426
+    second: PlayerShipExplosion_81
+  - first:
+      213: 5673627384941065801
+    second: PlayerShipExplosion_82
+  - first:
+      213: 7140314349859475948
+    second: PlayerShipExplosion_83
+  - first:
+      213: 4175420445525499755
+    second: PlayerShipExplosion_84
+  - first:
+      213: 2185229454742744869
+    second: PlayerShipExplosion_85
+  - first:
+      213: 8244161029162255786
+    second: PlayerShipExplosion_86
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerShipExplosion_0
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 632
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8531d50f015f08e00800000000000000
+      internalID: 1045104566650868568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_9
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 630
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a780247e4e6fc3f0800000000000000
+      internalID: -878362119079164000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_14
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 630
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: 0.4862069, y: 0.46209386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33edf3d7c535deb0800000000000000
+      internalID: -4695787904092478657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_39
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 330
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1a82288b89a3990800000000000000
+      internalID: -7405438719032253964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_42
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 330
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe37e5948ffcf700800000000000000
+      internalID: 575615797312306940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_48
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 332
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f64cf1c3f189830800000000000000
+      internalID: 4078043805675450267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_64
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 60
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99be4089d56a9cc0800000000000000
+      internalID: -3703535758723860068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_68
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 60
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4f428400a8dbad0800000000000000
+      internalID: -2684838069027932959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerShipExplosion_74
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 60
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc343eec13b75230800000000000000
+      internalID: 3627564961707080926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0f29f691da3ff9146bdd5d40243b9c0f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlayerShipExplosion_0: 1045104566650868568
+      PlayerShipExplosion_1: 6878313440184250832
+      PlayerShipExplosion_10: 2214310487389263684
+      PlayerShipExplosion_11: -3456817948620874824
+      PlayerShipExplosion_12: -7715975638259535712
+      PlayerShipExplosion_13: 672284193422648741
+      PlayerShipExplosion_14: -4695787904092478657
+      PlayerShipExplosion_15: -7874692083324876766
+      PlayerShipExplosion_16: 4496997292385111259
+      PlayerShipExplosion_17: -1149491061267067382
+      PlayerShipExplosion_18: -683086513859520634
+      PlayerShipExplosion_19: 8449603452573776233
+      PlayerShipExplosion_2: 6041784616436929297
+      PlayerShipExplosion_20: 1841031760068731765
+      PlayerShipExplosion_21: 2139588961015229560
+      PlayerShipExplosion_22: 4496811287061203171
+      PlayerShipExplosion_23: -2692664862661211317
+      PlayerShipExplosion_24: 3968526477343844125
+      PlayerShipExplosion_25: 7179267059946492194
+      PlayerShipExplosion_26: 8567150271544078588
+      PlayerShipExplosion_27: -1228190658523689649
+      PlayerShipExplosion_28: -1549194240465892920
+      PlayerShipExplosion_29: -8788004399484639150
+      PlayerShipExplosion_3: 3379837566783011498
+      PlayerShipExplosion_30: 8914104131254798961
+      PlayerShipExplosion_31: 3952825015598403314
+      PlayerShipExplosion_32: 9135672945380115169
+      PlayerShipExplosion_33: -4204979740212226074
+      PlayerShipExplosion_34: -4552010154445814331
+      PlayerShipExplosion_35: 4207876427128935320
+      PlayerShipExplosion_36: -3308629777154507494
+      PlayerShipExplosion_37: -5588602794949066580
+      PlayerShipExplosion_38: 83546506469970796
+      PlayerShipExplosion_39: -7405438719032253964
+      PlayerShipExplosion_4: 586959304298566963
+      PlayerShipExplosion_40: -2512136370921118001
+      PlayerShipExplosion_41: -761912035022962577
+      PlayerShipExplosion_42: 575615797312306940
+      PlayerShipExplosion_43: 6170289357155774231
+      PlayerShipExplosion_44: 3829591671835133289
+      PlayerShipExplosion_45: 4304332810221570014
+      PlayerShipExplosion_46: -7213267806649399638
+      PlayerShipExplosion_47: -7855776850637510789
+      PlayerShipExplosion_48: 4078043805675450267
+      PlayerShipExplosion_49: -3685619608620430420
+      PlayerShipExplosion_5: 3272109657368560811
+      PlayerShipExplosion_50: 4035184194541084838
+      PlayerShipExplosion_51: -18364989269658457
+      PlayerShipExplosion_52: 532617824591845403
+      PlayerShipExplosion_53: -4588238680029397472
+      PlayerShipExplosion_54: 7245111292185951882
+      PlayerShipExplosion_55: 3258805203092442362
+      PlayerShipExplosion_56: -2314413881243314595
+      PlayerShipExplosion_57: -3501028133866135714
+      PlayerShipExplosion_58: -3323965046163426449
+      PlayerShipExplosion_59: -4099201399949108081
+      PlayerShipExplosion_6: 7986080416783674416
+      PlayerShipExplosion_60: 2727521008765050133
+      PlayerShipExplosion_61: -2593325253958988563
+      PlayerShipExplosion_62: -2929002084360287869
+      PlayerShipExplosion_63: -2725671238948656188
+      PlayerShipExplosion_64: -3703535758723860068
+      PlayerShipExplosion_65: 8363962113714797026
+      PlayerShipExplosion_66: -4534240923963411245
+      PlayerShipExplosion_67: 5637331279663410696
+      PlayerShipExplosion_68: -2684838069027932959
+      PlayerShipExplosion_69: 2533312552000393965
+      PlayerShipExplosion_7: -739388016417228463
+      PlayerShipExplosion_70: -6803460683324429058
+      PlayerShipExplosion_71: -7015296419464692367
+      PlayerShipExplosion_72: 506928896287471351
+      PlayerShipExplosion_73: 3194198075071982931
+      PlayerShipExplosion_74: 3627564961707080926
+      PlayerShipExplosion_75: -8066720611668685246
+      PlayerShipExplosion_76: -3217802228859459612
+      PlayerShipExplosion_77: -7748620943385508698
+      PlayerShipExplosion_78: -7794583507115298942
+      PlayerShipExplosion_79: 7314722458336930535
+      PlayerShipExplosion_8: -8932592500203208957
+      PlayerShipExplosion_80: 8059894214206363146
+      PlayerShipExplosion_81: -7964215733341645426
+      PlayerShipExplosion_82: 5673627384941065801
+      PlayerShipExplosion_83: 7140314349859475948
+      PlayerShipExplosion_84: 4175420445525499755
+      PlayerShipExplosion_85: 2185229454742744869
+      PlayerShipExplosion_86: 8244161029162255786
+      PlayerShipExplosion_9: -878362119079164000
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
